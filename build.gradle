@@ -1,3 +1,5 @@
+apply plugin: 'eclipse'
+
 import groovy.sql.Sql
 
 task wrapper(type: Wrapper) {
@@ -35,10 +37,12 @@ Map db = [
 task resetDatabase {
   doLast {
     Sql sql = Sql.newInstance(db.url, db.user, db.password, db.driver)
-    def scripts = fileTree('src/main/sql')
+    def scripts = fileTree(dir: 'src/main/sql', include: '**/*.sql')
     scripts.each { File file ->
 	  logger.lifecycle 'Executing File ' + file
-      sql.execute file.text
+      file.text.split('---').each { String script ->
+	    sql.execute script
+	  }
     }
   }
 }
