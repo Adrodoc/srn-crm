@@ -1,4 +1,4 @@
-drop table if exists kunde;
+drop table if exists kunde cascade;
 ---
 create table kunde (
   id            integer         not null,

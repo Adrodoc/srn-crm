@@ -1,4 +1,4 @@
-drop table if exists mitarbeiter;
+drop table if exists mitarbeiter cascade;
 ---
 create table mitarbeiter (
   id        integer not null,

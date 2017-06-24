@@ -1,4 +1,4 @@
-drop table if exists ap_telefon;
+drop table if exists ap_telefon cascade;
 ---
 create table ap_telefon (
   id                integer not null,

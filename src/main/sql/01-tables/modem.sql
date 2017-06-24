@@ -1,4 +1,4 @@
-drop table if exists modem;
+drop table if exists modem cascade;
 ---
 create table modem (
   id            integer not null,

@@ -1,4 +1,4 @@
-drop table if exists projekt;
+drop table if exists projekt cascade;
 ---
 create table projekt (
   id                integer not null,

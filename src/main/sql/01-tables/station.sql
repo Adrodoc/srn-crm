@@ -1,4 +1,4 @@
-drop table if exists station;
+drop table if exists station cascade;
 ---
 create table station (
   id                    integer         not null,

@@ -1,4 +1,4 @@
-drop table if exists ap_email;
+drop table if exists ap_email cascade;
 ---
 create table ap_email (
   id                integer not null,

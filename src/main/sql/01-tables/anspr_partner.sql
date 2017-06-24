@@ -1,4 +1,4 @@
-drop table if exists anspr_partner;
+drop table if exists anspr_partner cascade;
 ---
 create table anspr_partner (
   id            integer not null,

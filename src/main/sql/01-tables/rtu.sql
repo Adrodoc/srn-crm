@@ -1,4 +1,4 @@
-drop table if exists rtu;
+drop table if exists rtu cascade;
 ---
 create table rtu (
   id            integer not null,

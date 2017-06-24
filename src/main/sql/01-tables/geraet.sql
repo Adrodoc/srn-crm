@@ -1,4 +1,4 @@
-drop table if exists geraet;
+drop table if exists geraet cascade;
 ---
 create table geraet (
   id            integer not null,
