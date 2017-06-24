@@ -1,9 +1,9 @@
 drop table if exists ap_telefon;
 create table ap_telefon (
-  id                    integer not null,
-  ansprechpartner_id    integer not null,
-  vorwahl               varchar(8) not null,
-  nummer                varchar(16) not null
+  id                integer not null,
+  anspr_partner_id  integer not null,
+  vorwahl           varchar(8) not null,
+  nummer            varchar(16) not null
 );
 
 create unique index ap_telefon_pk on ap_telefon(id);

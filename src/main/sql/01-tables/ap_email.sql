@@ -1,8 +1,8 @@
 drop table if exists ap_email;
 create table ap_email (
-  id                    integer not null,
-  ansprechpartner_id    integer not null,
-  email                 varchar(128) not null
+  id                integer not null,
+  anspr_partner_id  integer not null,
+  email             varchar(128) not null
 );
 
 create unique index ap_email_pk on ap_email(id);
