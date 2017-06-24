@@ -29,7 +29,7 @@ configurations.driver.each {File file ->
 
 Properties db = new Properties()
 file('properties/database.properties').withInputStream {
-    db.load(it)
+  db.load(it)
 }
 
 task resetDatabase {
@@ -37,14 +37,10 @@ task resetDatabase {
     Sql sql = Sql.newInstance(db.URL, db.USER, db.PASSWORD, db.DRIVER)
     def scripts = fileTree(dir: 'src/main/sql', include: '**/*.sql')
     scripts.each { File file ->
-	  logger.lifecycle 'Executing File ' + file
+      logger.lifecycle 'Executing File ' + file
       file.text.split('---').each { String script ->
-	    sql.execute script
-	  }
+        sql.execute script
+      }
     }
   }
 }
-
-
-
-
