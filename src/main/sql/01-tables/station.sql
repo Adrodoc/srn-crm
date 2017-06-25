@@ -3,6 +3,7 @@ drop table if exists station cascade;
 create table station (
   id                    integer         not null,
   projekt_id            integer         not null,
+  eigentuemer_id        integer         not null,
   name                  varchar(128)    not null,
   latitude              decimal(8,6),
   longitude             decimal(9,6),
